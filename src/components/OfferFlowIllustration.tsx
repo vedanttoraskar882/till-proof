@@ -1,7 +1,7 @@
 export function OfferFlowIllustration() {
   return (
     <figure
-      className="offer-flow"
+      className="offer-flow hero-animate hero-animate--4"
       aria-label="How a local offer moves from a creator’s post to a customer’s Visit Token and then to a till receipt"
     >
       <div className="offer-flow__header">
@@ -50,8 +50,36 @@ export function OfferFlowIllustration() {
         </div>
 
         <div className="flow-connector" aria-hidden="true">
-          <span className="flow-connector__arrow--mobile">↓</span>
-          <span className="flow-connector__arrow--desktop">→</span>
+          <svg
+            className="flow-connector__arrow--mobile"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M10 4V16M10 16L5.5 11.5M10 16L14.5 11.5"
+              stroke="currentColor"
+              strokeWidth="1.75"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <svg
+            className="flow-connector__arrow--desktop"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M4 10H16M16 10L11.5 5.5M16 10L11.5 14.5"
+              stroke="currentColor"
+              strokeWidth="1.75"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </div>
 
         {/* Artefact 2: Customer's Visit Token */}
@@ -88,8 +116,36 @@ export function OfferFlowIllustration() {
         </div>
 
         <div className="flow-connector" aria-hidden="true">
-          <span className="flow-connector__arrow--mobile">↓</span>
-          <span className="flow-connector__arrow--desktop">→</span>
+          <svg
+            className="flow-connector__arrow--mobile"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M10 4V16M10 16L5.5 11.5M10 16L14.5 11.5"
+              stroke="currentColor"
+              strokeWidth="1.75"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <svg
+            className="flow-connector__arrow--desktop"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M4 10H16M16 10L11.5 5.5M16 10L11.5 14.5"
+              stroke="currentColor"
+              strokeWidth="1.75"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </div>
 
         {/* Artefact 3: Till receipt */}

@@ -316,11 +316,6 @@ export function PilotRequestModal({
             />
           </div>
 
-          <p className="pilot-form__note">
-            This form saves your request in this browser only. It does not send
-            your details to TillProof.
-          </p>
-
           <div className="modal-actions">
             <button type="submit" className="btn btn--primary">
               Save pilot request

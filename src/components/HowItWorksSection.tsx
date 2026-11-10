@@ -1,4 +1,5 @@
 import { WORKFLOW_STEPS } from "../data/siteContent";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 function getActorClass(actor: string): string {
   if (actor === "Owner") return "actor-badge actor-badge--owner";
@@ -7,10 +8,13 @@ function getActorClass(actor: string): string {
 }
 
 export function HowItWorksSection() {
+  const { ref, revealed } = useScrollReveal<HTMLElement>();
+
   return (
     <section
+      ref={ref}
       id="how-it-works"
-      className="section section--tinted"
+      className={`section section--tinted reveal-section ${revealed ? "is-revealed" : ""}`}
       aria-labelledby="how-it-works-heading"
     >
       <div className="container">

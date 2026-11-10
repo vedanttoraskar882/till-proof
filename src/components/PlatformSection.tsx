@@ -1,10 +1,14 @@
 import { PLATFORM_MODULES } from "../data/siteContent";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export function PlatformSection() {
+  const { ref, revealed } = useScrollReveal<HTMLElement>();
+
   return (
     <section
+      ref={ref}
       id="platform"
-      className="section"
+      className={`section reveal-section ${revealed ? "is-revealed" : ""}`}
       aria-labelledby="platform-heading"
     >
       <div className="container">

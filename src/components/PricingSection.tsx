@@ -1,14 +1,18 @@
 import { PRICING_PLANS } from "../data/siteContent";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 interface PricingSectionProps {
   onOpenPilotModal: (trigger: HTMLElement) => void;
 }
 
 export function PricingSection({ onOpenPilotModal }: PricingSectionProps) {
+  const { ref, revealed } = useScrollReveal<HTMLElement>();
+
   return (
     <section
+      ref={ref}
       id="market-pricing"
-      className="section"
+      className={`section reveal-section ${revealed ? "is-revealed" : ""}`}
       aria-labelledby="pricing-heading"
     >
       <div className="container">

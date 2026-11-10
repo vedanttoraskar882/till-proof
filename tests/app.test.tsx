@@ -23,6 +23,12 @@ describe("TillProof landing page", () => {
       "faq",
       "footer",
     ]);
+
+    expect(container.querySelector(".wordmark__badge")).toBeNull();
+    const home = container.querySelector("#home")!;
+    expect(home).not.toHaveTextContent(
+      /Founding pilot planned for April–May 2027 across Bexley/i
+    );
   });
 
   it("displays exact pricing data, pilot terms and the £299.90 Growth worked example", () => {
@@ -69,6 +75,9 @@ describe("TillProof landing page", () => {
       fireEvent.click(button);
       const dialog = screen.getByRole("dialog", { name: "Request a Pilot" });
       expect(dialog).toBeInTheDocument();
+      expect(dialog).not.toHaveTextContent(
+        /This form saves your request in this browser only/i
+      );
 
       fireEvent.keyDown(document, { key: "Escape" });
       expect(

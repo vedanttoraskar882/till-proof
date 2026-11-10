@@ -11,7 +11,6 @@ export function FooterSection({ onOpenPilotModal }: FooterSectionProps) {
         <div className="site-footer__grid">
           <div>
             <a href="#home" className="wordmark">
-              <span className="wordmark__badge" aria-hidden="true" />
               <span>TillProof</span>
             </a>
             <p className="site-footer__desc">

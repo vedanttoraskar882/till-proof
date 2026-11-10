@@ -27,7 +27,6 @@ export function Header({ onOpenPilotModal }: HeaderProps) {
     <header className="site-header">
       <div className="container site-header__inner">
         <a href="#home" className="wordmark">
-          <span className="wordmark__badge" aria-hidden="true" />
           <span>TillProof</span>
         </a>
 

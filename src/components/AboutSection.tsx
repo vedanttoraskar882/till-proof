@@ -1,10 +1,14 @@
 import { WHO_IT_IS_FOR } from "../data/siteContent";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export function AboutSection() {
+  const { ref, revealed } = useScrollReveal<HTMLElement>();
+
   return (
     <section
+      ref={ref}
       id="about"
-      className="section section--tinted"
+      className={`section section--tinted reveal-section ${revealed ? "is-revealed" : ""}`}
       aria-labelledby="about-heading"
     >
       <div className="container">

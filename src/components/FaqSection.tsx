@@ -1,9 +1,11 @@
 import { useRef, useState } from "react";
 import { FAQ_ITEMS } from "../data/siteContent";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export function FaqSection() {
   const [openIds, setOpenIds] = useState<Record<string, boolean>>({});
   const triggerRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const { ref, revealed } = useScrollReveal<HTMLElement>();
 
   const toggleItem = (id: string) => {
     setOpenIds((prev) => ({
@@ -37,8 +39,9 @@ export function FaqSection() {
 
   return (
     <section
+      ref={ref}
       id="faq"
-      className="section section--tinted"
+      className={`section section--tinted reveal-section ${revealed ? "is-revealed" : ""}`}
       aria-labelledby="faq-heading"
     >
       <div className="container">
